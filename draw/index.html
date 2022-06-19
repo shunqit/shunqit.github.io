@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="'en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Image Classification using DoodleNet</title>
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <section id="header">
+    <h1>Draw to search</h1>
+    <canvas width="280" height="280" id="myCanvas"></canvas>
+    <button id="clearBtn">Clear Canvas</button>
+  </section>
+
+  <section id="navbar" style="display:none;">
+    <h2>It looks like these:</h2>
+    <div class="elem-container">
+      <div class='elem elem1 active' title=1 id="elem1">
+        <img src=" " alt="image1" class="elem_img">
+        <h4 class="elem_title">Flowers</h4>
+      </div>
+      <div class='elem elem2' title=2 id="elem2">
+        <img src=" " alt="image1" class="elem_img">
+        <h4 class="elem_title">Flowers</h4>
+      </div>
+      <div class='elem elem3' title=3 id="elem3">
+        <img src=" " alt="image1" class="elem_img">
+        <h4 class="elem_title">Flowers</h4>
+      </div>
+      <div class='elem elem4' title=4 id="elem4">
+        <img src=" " alt="image1" class="elem_img">
+        <h4 class="elem_title">Flowers</h4>
+      </div>
+      <div class='elem elem5' title=5 id="elem5">
+        <img src=" " alt="image1" class="elem_img">
+        <h4 class="elem_title">Flowers</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="product1" class="section-p1">
+    <div class="pro-container">
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+      <div class="'pro">
+        <img src="" alt="" class="item_img">
+        <div class="des">
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="popup-image" style="display:none;">
+    <span>&times;</span>
+    <img src="" alt="">
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

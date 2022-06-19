@@ -1,67 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css"/>
-  <title>Moodboard</title>
-</head>
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>New Access to Museum Online Collections</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-<body>
-  <p id="mood">I want to feel...</p>
-  <div class="rating">
-      <input type="radio" name="emoji" id="amusement">
-      <label for="amusement">
-        <img src="emoji/amusement@2x.png">
-        <h4>Amusement</h4>
-      </label> 
-      <input type="radio" name="emoji" id="excitement">
-      <label for="excitement">
-        <img src="emoji/excitement@2x.png">
-        <h4>Excitement</h4>
-      </label> 
-      <input type="radio" name="emoji" id="contentment">
-      <label for="contentment">
-        <img src="emoji/contentment@2x.png">
-        <h4>Contentment</h4>
-      </label> 
-      <input type="radio" name="emoji" id="awe" checked="checked">
-      <label for="awe">
-        <img src="emoji/awe@2x.png">
-        <h4>Awe</h4>
-      </label> 
-      <input type="radio" name="emoji" id="something else">
-      <label for="something else">
-        <img src="emoji/something else@2x.png">
-        <h4>Something else</h4>
-      </label> 
-      <input type="radio" name="emoji" id="sadness">
-      <label for="sadness">
-        <img src="emoji/sadness@2x.png">
-        <h4>Sadness</h4>
-      </label> 
-      <input type="radio" name="emoji" id="fear">
-      <label for="fear">
-        <img src="emoji/fear@2x.png">
-        <h4>Fear</h4>
-      </label> 
-      <input type="radio" name="emoji" id="disgust">
-      <label for="disgust">
-        <img src="emoji/disgust@2x.png">
-        <h4>Disgust</h4>
-      </label> 
-      <input type="radio" name="emoji" id="anger">
-      <label for="anger">
-        <img src="emoji/anger_1@2x.png">
-        <h4>Anger</h4>
-      </label> 
-  </div>
-  <div class="delete" id='delete' style="display:none;">
-    <span>&times;</span>
-  </div>
-  </body>
-  <script defer src="script.js"></script>
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
 
-</body>
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.png" alt="" /></span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>New Access to Museum Online Collections</h1>
+								<p>Graduation Project 2022 -- Shunqi Tang </p>
+								<p>Note: to get the last two prototypes working, you need to activate the <a href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf">Allow CORS Plugin</a>. </p>
+
+							</header>
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="images/moodboard.jpg" alt="" />
+									</span>
+									<a href="moodboard/index.html">
+										<h2>1. MoodBoard</h2>
+										<div class="content">
+											<p>Get in a mood before creating.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="images/mindmap.jpg" alt="" />
+									</span>
+									<a href="mindmap/index.html">
+										<h2>2. MindMap</h2>
+										<div class="content">
+											<p>Brainstorming together with Rijksstudio.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="images/draw.png" alt="" />
+									</span>
+									<a href="draw/index.html">
+										<h2>3. Draw to Search</h2>
+										<div class="content">
+											<p>Associate your drawing with different artworks.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="images/style.png" alt="" />
+									</span>
+									<a href="style/index.html">
+										<h2>4. Style Analyser</h2>
+										<div class="content">
+											<p>Upload a piece of art to analyse its style.</p>
+										</div>
+									</a>
+								</article>
+							</section>
+
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<!--<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							
+						</div>
+					</footer> -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>

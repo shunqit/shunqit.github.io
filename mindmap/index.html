@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ImageCloud</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="instruction" id="instruction">
+        <span>OK!</span>
+        <img src="assets/instruction.png">
+    </div>
+    <div class="loading" id="loading" style="display:none;">
+        <span>Loading...</span>
+    </div>
+    <div class="container" id="gallery">
+        <div class='search-box' id='search'>
+            <input type="text" id='userInput' placeholder="type here" name="q">
+            <input type="button" id='myButton' name="" value="Start">
+            <img src="assets/popular works/seach.jpeg" alt="image10" class="search_img">
+        </div>
+        <div class='item item1' draggable='true' title=1>
+            <img src="assets/popular works/flowers.jpg" alt="image1" class="item_img">
+            <h1 class="item_title">Flowers</h1>
+        </div>
+        <div class='item item2' draggable='true' title=2>
+            <img src="assets/popular works/animals.jpg" alt="image2" class="item_img">
+            <h1 class="item_title">Animals</h1>
+        </div>
+        <div class='item item3' draggable='true' title=3>
+            <img src="assets/popular works/rembrandt.jpg" alt="image3" class="item_img">
+            <h1 class="item_title">Rembrandt</h1>
+        </div>
+        <div class='item item4' draggable='true' title=4>
+            <img src="assets/popular works/vermeer.jpg" alt="image4" class="item_img">
+            <h1 class="item_title">Vermeer</h1>
+        </div>
+        <div class='item item5' draggable='true' title=5>
+            <img src="assets/popular works/birds.jpg" alt="image5" class="item_img">
+            <h1 class="item_title">Birds</h1>
+        </div>
+        <div class='item item6' draggable='true' title=6>
+            <img src="assets/popular works/stilleven.jpg" alt="image6" class="item_img">
+            <h1 class="item_title">Still life</h1>
+        </div>
+        <div class='item item7' draggable='true' title=7>
+            <img src="assets/popular works/portraits.jpg" alt="image7" class="item_img">
+            <h1 class="item_title">Portraits</h1>
+        </div>
+        <div class='item item8' draggable='true' title=8>
+            <img src="assets/popular works/japan.jpg" alt="image8" class="item_img">
+            <h1 class="item_title">Japan</h1>
+        </div>
+        <div class='item item9' draggable='true' title=9>
+            <img src="assets/popular works/landscape.jpg" alt="image9" class="item_img">
+            <h1 class="item_title">Landscape</h1>
+        </div>
+        <div class='item item10' draggable='true' title=10>
+            <img src="assets/popular works/beautiful.jpg" alt="image11" class="item_img">
+            <h1 class="item_title">Beautiful</h1>
+        </div>
+        <div class='item item11' draggable='true' title=11>
+            <img src="assets/popular works/winter.jpg" alt="image12" class="item_img">
+            <h1 class="item_title">Winter</h1>
+        </div>
+        <div class='item item12' draggable='true' title=12>
+            <img src="assets/popular works/fashion.jpg" alt="image13" class="item_img">
+            <h1 class="item_title">Fashion</h1>
+        </div>
+        <div class='item item13' draggable='true' title=13>
+            <img src="assets/popular works/golden age.jpg" alt="image14" class="item_img">
+            <h1 class="item_title">Golden Age</h1>
+        </div>
+        <div class='item item14' draggable='true' title=14>
+            <img src="assets/popular works/amsterdam.jpg" alt="image15" class="item_img">
+            <h1 class="item_title">Amsterdam</h1>
+        </div>
+        <div class='item item15' draggable='true' title=15>
+            <img src="assets/popular works/monsters.jpg" alt="image16" class="item_img">
+            <h1 class="item_title">Monsters</h1>
+        </div>
+        <div class='item item16' draggable='true' title=16>
+            <img src="assets/popular works/patterns.jpg" alt="image17" class="item_img">
+            <h1 class="item_title">Patterns</h1>
+        </div>
+        <div class='item item17' draggable='true' title=17>
+            <img src="assets/popular works/people.jpg" alt="image18" class="item_img">
+            <h1 class="item_title">People</h1>
+        </div>
+        <div class='item item18' draggable='true' title=18>
+            <img src="assets/popular works/nature.jpg" alt="image19" class="item_img">
+            <h1 class="item_title">Nature</h1>
+        </div>
+        <div class='item item19' draggable='true' title=19>
+            <img src="assets/popular works/paintings.jpg" alt="image20" class="item_img">
+            <h1 class="item_title">Paintings</h1>
+        </div>
+        <div class='item item20' draggable='true' title=20>
+            <img src="assets/popular works/women.jpg" alt="image21" class="item_img">
+            <h1 class="item_title">Women</h1>
+        </div>
+    </div>
+
+    <div class="popup-image" id='popup' style="display:none;">
+        <span>&times;</span>
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+        <img src="" alt="image" class="pop_img">
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
