@@ -92,4 +92,11 @@ img:hover{
 }
 
 
-
+.delete span{
+    position:absolute;
+    top:85%; right:50%;
+    font-size:100px;
+    font-weight:bolder;
+    color: red;
+    cursor: pointer;
+}

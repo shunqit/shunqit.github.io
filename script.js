@@ -14,6 +14,7 @@ const height = 280;
 let header = document.getElementById('mood');
 let afterMatch = false;
 let num=0;
+const icon= document.getElementById('delete');
 //var heading = document.getElementsByClassName('heading1');
 
 
@@ -92,12 +93,16 @@ async function load_pic(src,x,y) {
   pic.src = src;
   pic.style.left = x+'px';
   pic.style.top = y+"px";
-  pic.style.transform='translate(-50%,-50%) scale(0.2) rotate('+(Math.random()*20-10)+'deg)';
-  pic.style.width=500 + 'px' ;
-  pic.style.height=500 + 'px' ;
+  pic.style.transform='translate(-50%,-50%) scale(0.3) rotate('+(Math.random()*20-10)+'deg)';
+  pic.style.width=800 + 'px' ;
+  pic.style.height=800 + 'px' ;
   pic.style.objectFit='contain'; 
   document.body.appendChild(pic);
   pic.ondrag=function(){
     pic.style.display = "none";
+    icon.style.display='block';
   };
-  };
+  pic.addEventListener('dragend',()=>{
+    icon.style.display='none';
+  });
+}
