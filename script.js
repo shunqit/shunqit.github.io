@@ -1,7 +1,6 @@
-const video = document.getElementById('video');
-//const auth = "poaBzFoO";
+const emoji = document.querySelectorAll('input[name="emoji"]');
+const rating =document.getElementsByClassName('rating')[0];
 let mood = '';
-const matchbutton=document.querySelector('.matchbutton');
 let match=false;
 let query='';
 let artmood='';
@@ -18,89 +17,17 @@ let num=0;
 //var heading = document.getElementsByClassName('heading1');
 
 
-// //loading models
-// Promise.all([
-//   faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-//   faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-//   faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-//   faceapi.nets.faceExpressionNet.loadFromUri('/models')
-// ]).then(startVideo)
-
-// function startVideo() {
-//   navigator.getUserMedia(
-//     { video: {} },
-//     stream => video.srcObject = stream,
-//     err => console.error(err)
-//   )
-// }
-
-// //when video starts
-// video.addEventListener('play', () => {
-
-//   setInterval(async () => {
-//     const detections = await faceapi.detectSingleFace(video,new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
-
-//     if (detections && Object.keys(detections).length > 0) {
-//       const expressions = detections.expressions;
-
-//       //var arr=Object.keys(expressions).map(function(key){return expressions[key];});
-//       mood = Object.keys(expressions).reduce(function(a, b){ return expressions[a] > expressions[b] ? a : b });
-//     }
-   
-
-//   // Create canvas from our video element
-//   const canvas = faceapi.createCanvasFromMedia(video);
-//   document.body.append(canvas);
- 
-//   // Current size of our video
-//   const displaySize = { width: video.width, height: video.height }
-//   faceapi.matchDimensions(canvas, displaySize);
-//   // run the code multiple times in a row --> setInterval
-//   //  async func 'cause it's a async library
-//   setInterval(async () => {
-//       // Every 100ms, get all the faces inside of the webcam image to video element
-//       const detections = await faceapi.detectAllFaces(video, 
-//       new faceapi.TinyFaceDetectorOptions()).withFaceExpressions();
-//       canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
-
-//   }, 100)
-// });
-// });
 
 
-matchbutton.addEventListener('click',()=>{
-  // if (mood.length != 0){
-  //   if (mood == 'neutral'){
-  //     artmood='contentment';
-  //   }
-  //   else if (mood == 'sad'){
-  //     artmood='sadness';
-  //   }
-  //   else if (mood == 'happy'){
-  //     artmood='amusement';
-  //   }
-  //   else if (mood == 'fearful'){
-  //     artmood='fear';
-  //   }
-  //   else if (mood == 'disgusted'){
-  //     artmood='disgust';
-  //   }
-  //   else if (mood == 'angery'){
-  //     artmood='anger';
-  //   }
-  //   else if (mood == 'surprised'){
-  //     artmood='awe';
-  //   };
-  //   header.innerHTML ='Loading';
-  //   matchInput(artmood);
-  // }else{
-  //   header.innerHTML ='Try again';
-  // }
-  matchInput('awe');
+
+emoji.forEach((elem)=>{
+  elem.addEventListener('click',()=>{
+  matchInput(elem.id);
 })
+});
 
 async function matchInput(detectedEmotion){
-  header.innerHTML ='The detected emotional state is '+detectedEmotion +'. The matching art will be collected';
+  header.innerHTML ='Matching';
   var r=0;
   const response = await fetch('artemis.csv');
   const data=await response.text();
@@ -118,11 +45,9 @@ async function matchInput(detectedEmotion){
 
 
   if (moodIndex.length!=0){
-    video.pause();
-    video.style.display='none';
     afterMatch =true;
 
-    while(artURL.length<30){
+    while(artURL.length<50){
       var i=moodIndex[Math.floor(Math.random() * moodIndex.length)];
       if(artURL.indexOf(i) === -1) {
         var rowData= table[i+1]
@@ -136,8 +61,8 @@ async function matchInput(detectedEmotion){
     }
     //moodboard:
     if (afterMatch==true){
-      matchbutton.style.visibility = 'hidden';
-      header.innerHTML ='Click somewhere to start with your surpising moodboard';
+      rating.style.display = "none";
+      header.innerHTML ='Click somewhere to start with your surprising moodboard';
       console.log(artURL);
       document.addEventListener('click', function(event){
         header.innerHTML ='Loading';
@@ -146,15 +71,6 @@ async function matchInput(detectedEmotion){
         num+=1;
       })
     }
-
-  //   artURL.forEach(element =>{
-  //     load_pic(element,500,500)
-  //   })
-  // }else{
-  //   header.innerHTML ='Try again';
-  //   console.log('loading');
-  // }
-  
 }
 }
 
@@ -177,9 +93,11 @@ async function load_pic(src,x,y) {
   pic.style.left = x+'px';
   pic.style.top = y+"px";
   pic.style.transform='translate(-50%,-50%) scale(0.2) rotate('+(Math.random()*20-10)+'deg)';
+  pic.style.width=500 + 'px' ;
+  pic.style.height=500 + 'px' ;
+  pic.style.objectFit='contain'; 
   document.body.appendChild(pic);
-}
-
-
-
-
+  pic.ondrag=function(){
+    pic.style.display = "none";
+  };
+  };
