@@ -30,7 +30,7 @@ emoji.forEach((elem)=>{
 async function matchInput(detectedEmotion){
   header.innerHTML ='Matching';
   var r=0;
-  const response = await fetch('moodboard/artemis.csv');
+  const response = await fetch('artemis.csv');
   const data=await response.text();
   const table=data.split('\n').slice(1);
   table.forEach(row =>{
